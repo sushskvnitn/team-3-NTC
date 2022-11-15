@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    
+}
+.main {
+    width: 80%;
+    height: 450px;
+    position: relative;
+    margin: 50px 50px;
+}
+body{
+    background-color: #ebe5d9;
+}
+
+.title{
+    color: #041a0ae0;
+    font-weight: bolder;
+    background-color: #eeede7;
+    overflow: hidden;
+}
+.btn-box{
+    background-color: #262400;
+}
+.btn-box button {
+    color: rgb(255, 255, 255);
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 50px;
+    font-size: 20px;
+    overflow: hidden;
+}
+.btn-box svg {
+    margin-right: 15px; 
+     color: #e6c041;
+}
+.button_bottom{
+    position: fixed;
+    bottom: 0px;
+     right: 0px;
+     background-color: #043d78; 
+}
+.btn-box button {
+    color: #e6c041;
+}
+
+.btn-box button.active {
+    background-color: #b09434;
+}
+
+#Chart {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: auto;
+}
+
+#chart {
+    display: none;
+}
+
+.content .selector  {
+    border-color: #b09434;
+}
+
+.content-left p {
+    margin-left: 45px;
+    font-size: 22px;
+    padding: 5px 0;
+}
+
+.content-right p {
+    margin-left: 50px;
+    font-size: 22px;
+    padding: 5px 0;
+}
+
+.content-center p {
+    margin-left: 50px;
+    font-size: 22px;
+    padding: 5px 0;
+}
+
+.content-left select {
+    display: inline-block;
+    padding: 5px 5px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.content-right select {
+    display: inline-block;
+    padding: 5px 5px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.content-center select {
+    display: inline-block;
+    padding: 5px 5px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.chart button {
+    font-size: 18px;
+    margin: 40px auto;
+    width: 150px;
+    display: none;
+    padding: 5px 5px;
+    border-radius: 25px;
+}
+
+#Convert {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+#amount {
+    border-radius: 10px; 
+}
+
+.card-header {
+    text-align: center;
+}
+
+.chart-container {
+    display: flex;
+}
+
+#btn-grp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 790px;
+    margin: auto;
+}
+.chart {
+    width: 70%;
+    height: 50vh;
+}
+.card-header{
+    background-color: rgb(0,0,0,0.047);
+}
+
+#takeInp{
+    margin-left: 10px;
+    padding: 5px 5px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.converter-container{
+    display: none; 
+    margin-left: 40px;
+    color: white;
+}
+
+#foot{
+    margin-top: 5vh;
+    padding-top: 20px ;
+
+}
+
+a{
+    color: white;
+}

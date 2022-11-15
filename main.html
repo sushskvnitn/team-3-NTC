@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team-3</title>
+    <link rel = "icon" href = 
+    "https://e7.pngegg.com/pngimages/963/511/png-clipart-computer-icons-currency-trade-currency-converter-text-trademark.png" 
+            type = "image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+<body>
+    <div class="text-danger title bg-light text-center fs-2">
+        <a class="navbar-brand" href="/">
+            <img src="https://e7.pngegg.com/pngimages/963/511/png-clipart-computer-icons-currency-trade-currency-converter-text-trademark.png" alt="Bootstrap" width="30" height="24">
+          </a>
+       Team-3 Northen trust hackthon
+    </div>
+    <div class=" d-flex justify-content-center  ">
+    <iframe src="https://embed.lottiefiles.com/animation/105766" style=" pointer-events: none;"></iframe>
+    </div>
+    <div class="content m-3" id="Chart">
+        <div class="content-left ">
+            <div>From:
+<select class="btn btn-primary btn-sm" id="curr-1" required onchange="chartChange()">
+            </select>
+            </div>
+            
+        </div>
+        <div class="content-center" id="toID">
+            <div>To:<select class="btn btn-warning btn-sm" id="curr-2" required onchange="chartChange()">
+            </select></div>
+            
+        </div>
+        <div class="content-right">
+            <div>Year:
+                <select class="" id="year" required onchange="chartChange()">
+                <option value="2012" selected>2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+            </select>
+            </div>
+            
+        </div>
+        <div class="content-right">
+            <div>Month:<select class="" id="month" required onchange="chartChange()">
+                <option value="Jan" selected>January</option>
+                <option value="Feb">Februay</option>
+                <option value="Mar">March</option>
+                <option value="Apr">April</option>
+                <option value="May">May</option>
+                <option value="Jun">June</option>
+                <option value="Jul">July</option>
+                <option value="Aug">August</option>
+                <option value="Sep">September</option>
+                <option value="Oct">October</option>
+                <option value="Nov">November</option>
+                <option value="Dec">December</option>
+            </select></div>
+            
+        </div>
+        <a class="btn btn-outline-warning mx-4" href="/list">ISO CODES</a>
+        <div class="content-right">
+            <div>
+                 <p class="" id="day" required ></p></div>
+        </div>
+    </div>
+     <!-- high low  -->
+     <div class="d-flex justify-content-center">
+        <div class="card  mb-3 m-2" style="max-width: 18rem;">
+            <div class="card-header text-bg-success">HIGHEST </div>
+            <div class="card-body">
+                <p class="card-text" id="c1"></p>
+            </div>
+          </div>
+        <div class="card mb-3 m-2" style="max-width: 18rem;">
+            <div class="card-header text-bg-danger">LOWEST </div>
+            <div class="card-body">
+                <p class="card-text" id="c2"></p>
+            </div>
+          </div>
+      </div>
+      <div className=" mx-4 shadow d-flex ">
+       
+      
+      <div class="mx-4">
+        <select class="form-select" aria-label="Default select example" id="changegraph" onchange="chartChange()" style="width: 50%">
+            <option selected>show Graph by </option>
+            <option value="line" selected>line</option>
+            <option value="scatter">scatter</option>
+            <option value="bar">bar</option>
+            <option value="bubble">bubble</option>
+          </select>
+      </div>
+    </div>
+    <br>
+    <div class="btn-group" role="group"  id="btn-grp" aria-label="Basic radio toggle button group">
+        
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off" value="weekly"
+            onclick="chartChange()">
+        <label class="btn btn-sm btn-outline-primary" for="btnradio6">Weekly</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off" value="quarterly"
+            onclick="chartChange()">
+        <label class="btn btn-sm btn-outline-primary" for="btnradio7">Quarterly</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off" value="monthly"
+            onclick="chartChange()">
+        <label class="btn btn-sm btn-outline-primary" for="btnradio8">Monthly</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off" value="yearly" checked
+            onclick="chartChange()" style=>
+        <label class="btn btn-sm btn-outline-primary " for="btnradio9">Yearly</label>
+
+        
+    </div>
+
+    <!--Chart-->
+    <div class=" d-flex justify-content-center " id="tab1">
+        <div class="chart">
+            <div id="myChart"></div>
+        </div>
+    </div>
+    <script src="/js/index.js"></script>
+    <br>
+    <div class="converter-container" id="tab2" >
+        <input id="takeInp" type="number" onchange="currConvert()" value=1 style="width: 50px;"></input>
+        <div><p id="converse"></p></div>      
+    </div>
+    <footer class="page-footer text-dark font-small " id="foot">
+        <footer class="bg-light text-center text-lg-start">
+            <div class="container p-4">
+              <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                  <h5 class="text-uppercase text-success"> Project description  </h5>
+                  <p>
+                    It is a dashboard which will allow users to analyze the exchange rates between two currencies over a period of time. It provides user an option  to select duration for which they would prefer to see the data and graphs(weekly, monthly, quarterly, and yearly).The dashboard will also display the date on which the rate was at its peak (highest) and the date on which it was at its lowest.
+                  </p>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                  <h5 class="text-uppercase  text-success">Contributers</h5>
+                  <ul class="list-group list-group-light list-group-small">
+                    <li class="list-group-item text-warning">sushant kogurwar</li>
+                    <li class="list-group-item text-warning">Anushka Pandit</li>
+                    <li class="list-group-item text-warning">Harsh Gupta</li>
+                    <li class="list-group-item text-warning">Sai Nikhileswarareddy</li>
+                  </ul>
+                </div>
+              </div>
+              <!--Grid row-->
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2022 Copyright:
+              <a class="text-dark" href="/">team-3-northen-trust</a>
+            </div>
+          </footer>
+    </footer>
+</body>
+
+</html>
