@@ -11,13 +11,13 @@
     margin: 50px 50px;
 }
 body{
-    background-color: #ebe5d9;
+    background-color: #c2ebf6;
 }
 
 .title{
     color: #041a0ae0;
     font-weight: bolder;
-    background-color: #eeede7;
+    background-color: #010623;
     overflow: hidden;
 }
 .btn-box{
@@ -173,4 +173,21 @@ body{
 
 a{
     color: white;
+}
+.table
+{
+    border: 1px solid rgb(20, 18, 18);
+    width: 80%;
+}
+tr:hover {
+    background-color: rgb(80, 170, 255);
+    color: white;
+}
+th{
+    background-color: rgb(28, 2, 68);
+}
+#data
+{
+    font-style: italic; 
+    color: black;
 }
